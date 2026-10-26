@@ -1,0 +1,28 @@
+.messenger {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.chat-area {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--chat-bg);
+}
+
+.chat-placeholder {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  padding: 16px;
+}
+
+@media (max-width: 700px) {
+  .messenger[data-view='chat'] .sidebar,
+  .messenger[data-view='list'] .chat-area {
+    display: none;
+  }
+}
